@@ -1,0 +1,30 @@
+{
+  "name": "2016_perspective_manipulator",
+  "version": "1.0.0",
+  "description": "Grants perspective to those that believe they had a bad year in 2016. ",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jnocon/hrla12-mvp.git"
+  },
+  "author": "Jesse Nocon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jnocon/hrla12-mvp/issues"
+  },
+  "homepage": "https://github.com/jnocon/hrla12-mvp#readme",
+  "dependencies": {
+    "bluebird": "^3.4.7",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.7.7",
+    "morgan": "^1.7.0",
+    "nodemon": "^1.11.0",
+    "request": "^2.79.0",
+    "request-promise": "^4.1.1"
+  }
+}

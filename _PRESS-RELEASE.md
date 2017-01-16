@@ -18,27 +18,43 @@ Once the project moves into development, the press release can be used as a touc
  
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
-
+  
+  2016 Perspective Manipulator
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  
+  Grants perspective to those that believe they had a bad year in 2016. 
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
-
+  
+  Did your 2016 suck? Let us know why. After submitting your reasoning, the 2016 Perpective Manipulator will use a complex and secret algorithim to shed light on why your 2016 wasn't so bad after all!
 ## Problem ##
   > Describe the problem your product solves.
+
+  People believe 2016 sucked. In reality it sucked, but not as much as people think. 
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
 
+  It displays someone that had an objectivly worse 2016 then the user did. 
+
 ## Quote from You ##
   > A quote from a spokesperson in your company.
+
+  We all need to laugh at life a little more
 
 ## How to Get Started ##
   > Describe how easy it is to get started.
 
+  Just go to the webpage and type in the reason your 2016 sucked! The app takes care of the rest!
+
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
 
+  "Before using the 2016 Perpective Manipulator, I believed that I literally had the worst year of anyone in the world. After experiencing this app's mindblowing magic, I can now attack 2017 head on knowing that my 2016 was only midly crappy! 
+
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
+
+  Try the app! Seriously! You know you want to!
