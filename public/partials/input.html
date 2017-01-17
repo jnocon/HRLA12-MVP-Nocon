@@ -1,12 +1,26 @@
 
      <div>
-        <h4>Tell Us Why Your 2016 Sucked!</h4>
-<div class="md-block">
+        <h3 layout="row" layout-align="center center">Tell Us Why Your 2016 Sucked!</h3>
+        <div layout="column" layout-align="center center">
+        <md-input-container class="md-block" >
           <label>Reason 2016 Sucked</label>
-          <input type="string"  ng-model='input'/>
+          <textarea ng-model="input" md-maxlength="150" rows="1" md-select-on-focus></textarea>
+        </md-input-container>
+        <md-input-container class="md-block" >
           <label>Your Name</label>
-          <input type="string"  ng-model='name'/>
-          <button class="md-raised md-primary" ng-click="addInput(name, input)">Shift Perspecitve...</button>
+          <textarea ng-model="name" md-maxlength="25" rows="1" md-select-on-focus></textarea>
+        </md-input-container>
+        </div>
+       
+            
+        
+ 
+         
 </div>
+
+<div layout="row" layout-align="center center">
+   <md-button class="md-raised md-primary"  ng-click="addInput(name, input)">Shift Perspecitve...</md-button> 
+</div>
+
     
     </div> 

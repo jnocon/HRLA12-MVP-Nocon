@@ -1,20 +1,34 @@
 
-<div ng-init="getResult()">
+<!--<div ng-init="getResult()">
     <div>
         <div>
-            {{data.results.phrase}}
+            {{data.results.resp.phrase}}
         </div>
         <div>
-            {{data.results.name}}
+            {{data.results.resp.name}}
         </div>
         <div>
-            {{data.results.picture}}
+            {{data.results.resp.picture}}
         </div>
         <div>
-            {{data.results.obituary}}
+            {{data.results.resp.obituary}}
         </div>
         <div>
-            {{data.results.phrase}}
+            {{data.results.url}}
         </div>
     </div>
-</div>
+</div>-->
+
+<md-card md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch ng-init="getResult()">
+        <md-card-title >
+          <md-card-title-text layout="column" layout-align="center center">
+            <span class="md-headline">{{data.results.resp.phrase}}</span>
+            <span class="md-subhead">{{data.results.resp.name}} Was :(</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content layout="row"  layout-align="start start">
+          <div class="md-media-xl card-media"></div>
+          <img src="{{data.results.resp.obituary}}" class="md-card-image" alt="Washed Out">
+         <iframe class="youtube-player" type="text/html" width="640" height="385" ng-src="{{trustSrc(link.src)}}" allowfullscreen frameborder="0">
+        </md-card-content>
+      </md-card>

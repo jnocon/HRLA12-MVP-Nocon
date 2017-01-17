@@ -17,7 +17,7 @@ PM.config(function($stateProvider, $urlRouterProvider) {
         
 });
 
-PM.controller('PMCtrl', function($scope, $state, inputFactory, resultFactory) {
+PM.controller('PMCtrl', function($scope, $state, $sce, inputFactory, resultFactory) {
     $scope.data = {};
     $scope.name = '';
     $scope.input = '';
@@ -30,11 +30,21 @@ PM.controller('PMCtrl', function($scope, $state, inputFactory, resultFactory) {
         })
      };
 
+    $scope.trustSrc = function(src) {
+        return $sce.trustAsResourceUrl(src);
+  }
+
+  
+
      $scope.getResult = function() {
          console.log('is getResult firing? ', $scope.input )
          resultFactory.getResult($scope.input)
          .then(function(resp){
              console.log('celeb data returning? ', resp);
+
+
+            $scope.link = {src: resp.url};
+             console.log($scope.link)
              $scope.data.results = resp
          })
      }

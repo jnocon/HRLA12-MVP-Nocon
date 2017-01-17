@@ -35,9 +35,33 @@ celebController.getCeleb = function(req, res) {
         var n = "Anton Yelchin"
     }
 
-    Celeb.findOne({name: n})
-    .then(function(resp) {
-        res.status(201).send(resp)
+    var options = {
+        uri: "https://www.googleapis.com/youtube/v3/search",
+        qs: {
+            key: "AIzaSyB9xax9M1uG-5DSdlJbh6ZOzLvGlKtCFNY",
+            q: "Anton Yelchin memorial",
+            type: 'video',
+            videoEmbeddable: "true",
+            part: 'snippet',
+            maxResults: 1
+        }
+    };
+
+    request(options)
+    .then( function (resp) {
+
+        var response = JSON.parse(resp);
+        var link = "https://www.youtube.com/embed/" + response.items[0].id.videoId;
+        Celeb.findOne({name: n})
+        .then(function(resp) {
+        var response = {};
+        response.resp = resp;
+        response.url = link;
+        res.status(201).send(response)
+        })
+    })
+    .catch(function(err){
+        console.log("error in request ", err);
     })
 }
 
