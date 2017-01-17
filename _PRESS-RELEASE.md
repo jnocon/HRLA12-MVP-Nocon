@@ -28,7 +28,7 @@ Once the project moves into development, the press release can be used as a touc
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
   
-  Did your 2016 suck? Let us know why. After submitting your reasoning, the 2016 Perpective Manipulator will use a complex and secret algorithim to shed light on why your 2016 wasn't so bad after all!
+  Did your 2016 suck? Let us know why. After submitting your reasoning, the 2016 Perspective Manipulator will use a complex and secret algorithim to shed light on why your 2016 wasn't so bad after all!
 ## Problem ##
   > Describe the problem your product solves.
 
