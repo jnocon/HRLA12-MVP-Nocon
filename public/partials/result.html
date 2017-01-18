@@ -18,17 +18,68 @@
         </div>
     </div>
 </div>-->
+<div ng-init="getResult()">
+<md-card md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch>
+    <md-card-title >
+        <md-card-title-text layout="column" layout-align="center center">
+        <span class="md-headline">Sorry Your 2016 Sucked {{name}},</span>
+        <span class="md-headline">But {{data.results.resp.phrase}}</span>
+        <span class="md-subhead">Like {{data.results.resp.name}}</span>
+        </md-card-title-text>
+    </md-card-title>
+    <md-card-actions theme='bong' layout="row" layout-align="center center">
+                <md-button  ng-href="{{data.results.resp.obituary}}">{{data.results.resp.name}}'s Obituary</md-button>
+            </md-card-actions>
+</md-card>
 
-<md-card md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch ng-init="getResult()">
-        <md-card-title >
-          <md-card-title-text layout="column" layout-align="center center">
-            <span class="md-headline">{{data.results.resp.phrase}}</span>
-            <span class="md-subhead">{{data.results.resp.name}} Was :(</span>
+
+
+    <div layout="row"       layout-align="space-around center">
+        <md-card md-theme="{{ showDarkTheme ? 'dark-blue' : 'bong' }}" md-theme-watch>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Feeling Better Yet?</span>
+            <span class="md-subhead">{{data.results.resp.name}} Sure Isn't</span>
+          </md-card-title-text>
+          <md-card-title-media layout="column" layout-align="center">
+            <div class="md-media-md card-media"></div>
+            <img src="{{data.results.resp.picture}}" class="md-card-image" alt="Washed Out" width="260" height="150">
+          </md-card-title-media>
+        </md-card-title>
+      </md-card>
+            
+        
+
+         <md-card md-theme="{{ showDarkTheme ? 'dark-orange' : 'andrew' }}" md-theme-watch>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">RIP {{data.results.resp.name}}</span>
+            <span class="md-subhead">Click The Vid For Feels</span>
           </md-card-title-text>
         </md-card-title>
-        <md-card-content layout="row"  layout-align="start start">
+        <md-card-content layout="row" layout-align="center center">
+          <div class="md-media-xl card-media"></div>
+            <iframe class="youtube-player" type="text/html" width="520" height="300" ng-src="{{trustSrc(link.src)}}" allowfullscreen frameborder="0">
+        </md-card-content>
+       
+       </md-content>
+</div>
+      
+        
+            
+     
+        
+</div>
+    
+</div>
+
+
+       
+       
+       
+        <!--<md-card-content layout="row"  layout-align="start start">
           <div class="md-media-xl card-media"></div>
           <img src="{{data.results.resp.obituary}}" class="md-card-image" alt="Washed Out">
          <iframe class="youtube-player" type="text/html" width="640" height="385" ng-src="{{trustSrc(link.src)}}" allowfullscreen frameborder="0">
         </md-card-content>
-      </md-card>
+      </md-card>-->

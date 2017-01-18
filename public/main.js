@@ -1,7 +1,7 @@
 var PM = angular.module('PM', ['ui.router', 'ngMaterial']);
 
 
-PM.config(function($stateProvider, $urlRouterProvider) {
+PM.config(function($stateProvider, $urlRouterProvider, $mdThemingProvider) {
     
     $urlRouterProvider.otherwise('/input');
     
@@ -13,7 +13,26 @@ PM.config(function($stateProvider, $urlRouterProvider) {
         .state('result', {
             url: '/result',
             templateUrl: '/partials/result.html'      
+        })
+        .state('calculating', {
+            url: '/calculating',
+            templateUrl: '/partials/calculating.html'      
         });
+
+    $mdThemingProvider.theme('default')
+    .dark();
+    $mdThemingProvider.theme('andrew')
+    .primaryPalette('pink')
+    .accentPalette('orange')
+    .backgroundPalette('orange')
+    .dark();
+     $mdThemingProvider.theme('bong')
+    .primaryPalette('pink')
+    .accentPalette('orange')
+    .backgroundPalette('blue')
+    .dark();
+     
+
         
 });
 
@@ -26,7 +45,12 @@ PM.controller('PMCtrl', function($scope, $state, $sce, inputFactory, resultFacto
         $scope.input = input;
         inputFactory.addInput(name, input)
         .then(function(resp) {
-             $state.transitionTo('result');
+            $state.go('calculating');
+
+            setTimeout(function() {
+              $state.go('result');  
+            }, 5000);
+             
         })
      };
 
@@ -37,14 +61,9 @@ PM.controller('PMCtrl', function($scope, $state, $sce, inputFactory, resultFacto
   
 
      $scope.getResult = function() {
-         console.log('is getResult firing? ', $scope.input )
          resultFactory.getResult($scope.input)
          .then(function(resp){
-             console.log('celeb data returning? ', resp);
-
-
             $scope.link = {src: resp.url};
-             console.log($scope.link)
              $scope.data.results = resp
          })
      }

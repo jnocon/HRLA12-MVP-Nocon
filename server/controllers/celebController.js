@@ -28,18 +28,48 @@ celebController.addCeleb = function(req, res) {
 
 celebController.getCeleb = function(req, res) {
     var input = req.body.input;
+    var n = ''
+    var nArr = ["Anton Yelchin", "Carrie Fisher", "Debbie Reynolds", "Phife Dawg", "Prince", "Fidel Castro", "David Bowie", "Gene Wilder", "Jose Fernandez", "Alan Thicke" ];
 
-    if (input === "hi mom") {
-        console.log('hi mom')
+    if (input.includes('car') || input.includes('fence') || input.includes('crushed')  ) {
+        n = "Anton Yelchin"
+    } else if (input.includes('car') || input.includes('heart') || input.includes('star wars')) {
+         n = "Carrie Fisher"
+    } else if (input.includes('daughter') || input.includes('mom') || input.includes('christmas')) {
+         n = "Debbie Reynolds"
+    } else if (input.includes('sugar') || input.includes('tribe') || input.includes('diabetes')) {
+         n = "Phife Dawg"
+    } else if (input.includes('drugs') || input.includes('legend') || input.includes('purple rain')) {
+         n = "Prince"
+    } else if (input.includes('cuba') || input.includes('dictator') || input.includes('russia')) {
+         n = "Fidel Castro"
+    } else if (input.includes('sick') || input.includes('cancer') || input.includes('hospital')) {
+         n = "David Bowie"
+    } else if (input.includes('forget') || input.includes('memory') || input.includes('family')) {
+         n = "Gene Wilder"
+    } else if (input.includes('drunk') || input.includes('drink') || input.includes('water')) {
+         n = "Jose Fernandez"
+    } else if (input.includes('son') || input.includes('father') || input.includes('young')) {
+         n = "Alan Thicke"
     } else {
-        var n = "Anton Yelchin"
+        var i = Math.floor((Math.random() * 9))
+        console.log(i = i);
+        n = nArr[i];
+
     }
+
+    var q = n + "memoriam";
+    if (n === 'Phife Dawg') {
+        q = n + "memorial";
+    }
+
+
 
     var options = {
         uri: "https://www.googleapis.com/youtube/v3/search",
         qs: {
             key: "AIzaSyB9xax9M1uG-5DSdlJbh6ZOzLvGlKtCFNY",
-            q: "Anton Yelchin memorial",
+            q: q,
             type: 'video',
             videoEmbeddable: "true",
             part: 'snippet',

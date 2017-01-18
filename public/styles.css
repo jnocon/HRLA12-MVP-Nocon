@@ -5,3 +5,8 @@
 .subtext {
     font-size: 125%
 }
+
+.calc {
+    margin-left: 60%;
+    /*margin-right: auto;*/
+}
